@@ -4,6 +4,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emotion/core": "^10.0.28",
+    "@emotion/styled": "^10.0.27",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
@@ -16,8 +18,13 @@
     "prettier": "^2.0.5",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-helmet": "^6.0.0",
     "react-scripts": "3.4.1",
     "typescript": "^3.7.5"
+  },
+  "devDependencies": {
+    "@types/react-helmet": "^5.0.15",
+    "eslint-plugin-emotion": "^10.0.27"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -28,7 +35,16 @@
     "format": "prettier --write \"**/*.+(js|jsx|json|yml|yaml|css|less|scss|ts|tsx|graphql|md|mdx)\""
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": "react-app",
+    "plugins": [
+      "emotion"
+    ],
+    "rules": {
+      "emotion/jsx-import": "error",
+      "emotion/no-vanilla": "error",
+      "emotion/import-from-emotion": "error",
+      "emotion/styled-import": "error"
+    }
   },
   "browserslist": {
     "production": [
@@ -49,8 +65,7 @@
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
-      "eslint",
-      "jest --findRelatedTests"
+      "eslint"
     ],
     "src/**/*.{js|jsx|json|yml|yaml|css|less|scss|ts|tsx|md|graphql|mdx}": [
       "prettier --write"
