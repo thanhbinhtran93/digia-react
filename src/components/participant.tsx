@@ -17,6 +17,7 @@ const Wrapper = styled('div')`
   & > * {
     line-height: 24px;
     font-weight: 400;
+    flex: 1;
   }
 `;
 

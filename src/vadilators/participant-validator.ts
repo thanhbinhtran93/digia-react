@@ -1,5 +1,5 @@
 import * as Yup from 'yup';
-import { PersonWithId, Person } from 'interfaces/Person';
+import { Person } from 'interfaces/Person';
 
 export const participantSchema = Yup.object<Person>({
   name: Yup.string().required(),

@@ -2,7 +2,7 @@ import React from 'react';
 import { useFormik } from 'formik';
 
 import { useParticipantContext } from 'contexts/participant-context';
-import { Person, PersonWithId } from 'interfaces/Person';
+import { Person } from 'interfaces/Person';
 import { participantSchema } from 'vadilators/participant-validator';
 
 const getInitialForm = (): Person => {
