@@ -1,10 +1,9 @@
 import React from 'react';
-import * as Yup from 'yup';
-import { v4 as id } from 'uuid';
 import { useFormik } from 'formik';
 
 import { useParticipantContext } from 'contexts/participant-context';
 import { Person, PersonWithId } from 'interfaces/Person';
+import { participantSchema } from 'vadilators/participant-validator';
 
 const getInitialForm = (): Person => {
   return {
@@ -14,27 +13,21 @@ const getInitialForm = (): Person => {
   };
 };
 
-// TODO: validate email + phone
-const personSchema = Yup.object<Person>({
-  name: Yup.string().required(),
-  email: Yup.string().required(),
-  phone: Yup.string().required(),
-});
-
 export const NewParticipant: React.FC = () => {
   const { addParticipant } = useParticipantContext();
 
   const formik = useFormik<Person>({
     initialValues: getInitialForm(),
-    onSubmit: (values) => {
+    onSubmit: (values, helpers) => {
       addParticipant(values);
-      formik.resetForm();
+      helpers.resetForm();
     },
-    validationSchema: personSchema,
+    validationSchema: participantSchema,
   });
 
   return (
     <form onSubmit={formik.handleSubmit}>
+      {JSON.stringify(formik.errors, null, 2)}
       <input placeholder="Full name" name="name" value={formik.values.name} onChange={formik.handleChange} />
       <input
         placeholder="E-mail address"

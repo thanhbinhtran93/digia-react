@@ -1,9 +1,9 @@
 import React from 'react';
-import * as Yup from 'yup';
 import { PersonWithId } from 'interfaces/Person';
 import styled from '@emotion/styled';
 import { useParticipantContext } from 'contexts/participant-context';
 import { useFormik } from 'formik';
+import { participantSchema } from 'vadilators/participant-validator';
 
 interface ParticipantProps {
   participant: PersonWithId;
@@ -55,13 +55,6 @@ const DisplayParticipant: React.FC<DisplayParticipantProps> = ({ participant, on
   );
 };
 
-const personSchema = Yup.object<PersonWithId>({
-  id: Yup.string().required(),
-  name: Yup.string().required(),
-  email: Yup.string().required(),
-  phone: Yup.string().required(),
-});
-
 interface EditParticipantProps extends ParticipantProps {
   onToggleEditing: () => void;
 }
@@ -75,11 +68,12 @@ const EditParticipant: React.FC<EditParticipantProps> = ({ participant, onToggle
       editParticipant(values);
       onToggleEditing();
     },
-    validationSchema: personSchema,
+    validationSchema: participantSchema,
   });
 
   return (
     <form onSubmit={formik.handleSubmit}>
+      {JSON.stringify(formik.errors, null, 2)}
       <input placeholder="Full name" name="name" value={formik.values.name} onChange={formik.handleChange} />
       <input
         placeholder="E-mail address"
