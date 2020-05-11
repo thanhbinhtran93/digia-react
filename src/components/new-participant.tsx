@@ -1,8 +1,10 @@
 import React from 'react';
 import * as Yup from 'yup';
-import { useParticipantContext } from 'contexts/participant-context';
+import { v4 as id } from 'uuid';
 import { useFormik } from 'formik';
-import { Person } from 'interfaces/Person';
+
+import { useParticipantContext } from 'contexts/participant-context';
+import { Person, PersonWithId } from 'interfaces/Person';
 
 const getInitialForm = (): Person => {
   return {
@@ -19,12 +21,15 @@ const personSchema = Yup.object<Person>({
   phone: Yup.string().required(),
 });
 
-export const NewParticipant = () => {
+export const NewParticipant: React.FC = () => {
   const { addParticipant } = useParticipantContext();
 
   const formik = useFormik<Person>({
     initialValues: getInitialForm(),
-    onSubmit: (values) => addParticipant(values),
+    onSubmit: (values) => {
+      addParticipant(values);
+      formik.resetForm();
+    },
     validationSchema: personSchema,
   });
 

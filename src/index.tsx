@@ -10,6 +10,10 @@ ReactDOM.render(
   document.getElementById('root'),
 );
 
+if ((module as any).hot) {
+  (module as any).hot.accept();
+}
+
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA

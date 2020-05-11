@@ -15,7 +15,12 @@ type RemoveParticipantAction = {
   payload: Pick<PersonWithId, 'id'>;
 };
 
-type Action = AddParticipantAction | RemoveParticipantAction;
+type EditParticipantAction = {
+  type: 'EDIT_PARTICIPANT';
+  payload: PersonWithId;
+};
+
+type Action = AddParticipantAction | RemoveParticipantAction | EditParticipantAction;
 
 interface ParticipantContextType {
   state: ParticipantState;
@@ -30,6 +35,11 @@ const participantReducer = (state: ParticipantState, action: Action) => {
       return [action.payload, ...state];
     case 'REMOVE_PARTICIPANT':
       return state.filter((item) => item.id !== action.payload.id);
+    case 'EDIT_PARTICIPANT':
+      return state.map((item) => {
+        if (item.id === action.payload.id) return action.payload;
+        return item;
+      });
     default:
       throw new Error(`Action is not supported: ${(action as any).type}`);
   }
@@ -59,9 +69,14 @@ export const useParticipantContext = () => {
     dispatch({ type: 'REMOVE_PARTICIPANT', payload: { id } });
   };
 
+  const editParticipant = (participant: PersonWithId) => {
+    dispatch({ type: 'EDIT_PARTICIPANT', payload: participant });
+  };
+
   return {
     participants: state,
     addParticipant,
     removeParticipant,
+    editParticipant,
   };
 };
