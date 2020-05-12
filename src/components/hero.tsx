@@ -6,7 +6,7 @@ export const Hero: React.FC = () => {
   return (
     <div
       css={css`
-        background-color: rgb(175, 181, 188);
+        background-color: #afb5bc;
         display: flex;
         align-items: center;
         padding: 2rem;
