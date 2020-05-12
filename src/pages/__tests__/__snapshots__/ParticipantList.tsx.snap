@@ -1,0 +1,980 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Edit a row 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <form
+        class="css-1fk24ga-NewParticipant"
+      >
+        <div
+          class="css-qjyi4g-Table"
+        >
+          <div
+            class="css-1m8z7nf-NewParticipant"
+          >
+            <div
+              class="css-195vmrj-Cell"
+            >
+              <input
+                class="css-17f5ri4-Input"
+                name="name"
+                placeholder="Full name"
+                value=""
+              />
+            </div>
+            <div
+              class="css-195vmrj-Cell"
+            >
+              <input
+                class="css-17f5ri4-Input"
+                name="email"
+                placeholder="E-mail address"
+                type="email"
+                value=""
+              />
+            </div>
+            <div
+              class="css-195vmrj-Cell"
+            >
+              <input
+                class="css-17f5ri4-Input"
+                name="phone"
+                placeholder="Phone number"
+                type="tel"
+                value=""
+              />
+            </div>
+            <div
+              class="css-195vmrj-Cell"
+            >
+              <button
+                class="css-3ox8zq"
+                color="primary"
+                type="submit"
+              >
+                Add new
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
+      <div
+        class="css-qjyi4g-Table"
+      >
+        <div
+          class="css-1ub16qz-ParticipantList"
+        >
+          <div
+            class="css-195vmrj-Cell"
+          >
+            <span
+              class="css-m8ub5d"
+            >
+              Name
+            </span>
+          </div>
+          <div
+            class="css-195vmrj-Cell"
+          >
+            <span
+              class="css-m8ub5d"
+            >
+              E-mail address
+            </span>
+          </div>
+          <div
+            class="css-195vmrj-Cell"
+          >
+            <span
+              class="css-m8ub5d"
+            >
+              Phone number
+            </span>
+          </div>
+          <div
+            class="css-195vmrj-Cell"
+          />
+        </div>
+        <div
+          class="css-otiz8p-DisplayParticipant"
+        >
+          <div
+            class="css-195vmrj-Cell"
+          >
+            John Doe
+          </div>
+          <div
+            class="css-195vmrj-Cell"
+          >
+            john.doe@example.com
+          </div>
+          <div
+            class="css-195vmrj-Cell"
+          >
+            0441111111
+          </div>
+          <div
+            class="css-195vmrj-Cell"
+          >
+            <button
+              class="css-s6bjet"
+              data-testid="edit-john-doe-id"
+            >
+              <svg
+                fill="currentColor"
+                focusable="false"
+                height="48"
+                role="img"
+                viewBox="0 0 24 24"
+                width="48"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>
+                  Edit icon
+                </title>
+                <path
+                  d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04a.996.996 0 000-1.41l-2.34-2.34a.996.996 0 00-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+                />
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                />
+              </svg>
+            </button>
+            <button
+              class="css-s6bjet"
+              data-testid="delete-john-doe-id"
+            >
+              <svg
+                fill="currentColor"
+                focusable="false"
+                height="48"
+                role="img"
+                viewBox="0 0 24 24"
+                width="48"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>
+                  Delete icon
+                </title>
+                <path
+                  d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                />
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div
+          class="css-otiz8p-DisplayParticipant"
+        >
+          <div
+            class="css-195vmrj-Cell"
+          >
+            Kaycee Cimah
+          </div>
+          <div
+            class="css-195vmrj-Cell"
+          >
+            kaycee.cimah@example.com
+          </div>
+          <div
+            class="css-195vmrj-Cell"
+          >
+            8468361594
+          </div>
+          <div
+            class="css-195vmrj-Cell"
+          >
+            <button
+              class="css-s6bjet"
+              data-testid="edit-e732f945-3eed-42d0-9b77-381c232a98dc"
+            >
+              <svg
+                fill="currentColor"
+                focusable="false"
+                height="48"
+                role="img"
+                viewBox="0 0 24 24"
+                width="48"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>
+                  Edit icon
+                </title>
+                <path
+                  d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04a.996.996 0 000-1.41l-2.34-2.34a.996.996 0 00-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+                />
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                />
+              </svg>
+            </button>
+            <button
+              class="css-s6bjet"
+              data-testid="delete-e732f945-3eed-42d0-9b77-381c232a98dc"
+            >
+              <svg
+                fill="currentColor"
+                focusable="false"
+                height="48"
+                role="img"
+                viewBox="0 0 24 24"
+                width="48"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>
+                  Delete icon
+                </title>
+                <path
+                  d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                />
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div
+          class="css-otiz8p-DisplayParticipant"
+        >
+          <div
+            class="css-195vmrj-Cell"
+          >
+            Jemimah McLain
+          </div>
+          <div
+            class="css-195vmrj-Cell"
+          >
+            jemimah.mclain@example.com
+          </div>
+          <div
+            class="css-195vmrj-Cell"
+          >
+            8738048768
+          </div>
+          <div
+            class="css-195vmrj-Cell"
+          >
+            <button
+              class="css-s6bjet"
+              data-testid="edit-2e987437-a4b4-46f5-b93b-ec2e2b5b15a5"
+            >
+              <svg
+                fill="currentColor"
+                focusable="false"
+                height="48"
+                role="img"
+                viewBox="0 0 24 24"
+                width="48"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>
+                  Edit icon
+                </title>
+                <path
+                  d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04a.996.996 0 000-1.41l-2.34-2.34a.996.996 0 00-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+                />
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                />
+              </svg>
+            </button>
+            <button
+              class="css-s6bjet"
+              data-testid="delete-2e987437-a4b4-46f5-b93b-ec2e2b5b15a5"
+            >
+              <svg
+                fill="currentColor"
+                focusable="false"
+                height="48"
+                role="img"
+                viewBox="0 0 24 24"
+                width="48"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>
+                  Delete icon
+                </title>
+                <path
+                  d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                />
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div
+          class="css-otiz8p-DisplayParticipant"
+        >
+          <div
+            class="css-195vmrj-Cell"
+          >
+            Frank Queridas
+          </div>
+          <div
+            class="css-195vmrj-Cell"
+          >
+            frank.queridas@example.com
+          </div>
+          <div
+            class="css-195vmrj-Cell"
+          >
+            6086265451
+          </div>
+          <div
+            class="css-195vmrj-Cell"
+          >
+            <button
+              class="css-s6bjet"
+              data-testid="edit-6232da7f-b973-4ec1-bc1d-efc58b767d1c"
+            >
+              <svg
+                fill="currentColor"
+                focusable="false"
+                height="48"
+                role="img"
+                viewBox="0 0 24 24"
+                width="48"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>
+                  Edit icon
+                </title>
+                <path
+                  d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04a.996.996 0 000-1.41l-2.34-2.34a.996.996 0 00-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+                />
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                />
+              </svg>
+            </button>
+            <button
+              class="css-s6bjet"
+              data-testid="delete-6232da7f-b973-4ec1-bc1d-efc58b767d1c"
+            >
+              <svg
+                fill="currentColor"
+                focusable="false"
+                height="48"
+                role="img"
+                viewBox="0 0 24 24"
+                width="48"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>
+                  Delete icon
+                </title>
+                <path
+                  d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                />
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div
+          class="css-otiz8p-DisplayParticipant"
+        >
+          <div
+            class="css-195vmrj-Cell"
+          >
+            Filide Loring
+          </div>
+          <div
+            class="css-195vmrj-Cell"
+          >
+            filide.loring@example.com
+          </div>
+          <div
+            class="css-195vmrj-Cell"
+          >
+            4784651204
+          </div>
+          <div
+            class="css-195vmrj-Cell"
+          >
+            <button
+              class="css-s6bjet"
+              data-testid="edit-2a525e5d-3018-42c9-9896-9babe60dc144"
+            >
+              <svg
+                fill="currentColor"
+                focusable="false"
+                height="48"
+                role="img"
+                viewBox="0 0 24 24"
+                width="48"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>
+                  Edit icon
+                </title>
+                <path
+                  d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04a.996.996 0 000-1.41l-2.34-2.34a.996.996 0 00-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+                />
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                />
+              </svg>
+            </button>
+            <button
+              class="css-s6bjet"
+              data-testid="delete-2a525e5d-3018-42c9-9896-9babe60dc144"
+            >
+              <svg
+                fill="currentColor"
+                focusable="false"
+                height="48"
+                role="img"
+                viewBox="0 0 24 24"
+                width="48"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>
+                  Delete icon
+                </title>
+                <path
+                  d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                />
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <form
+      class="css-1fk24ga-NewParticipant"
+    >
+      <div
+        class="css-qjyi4g-Table"
+      >
+        <div
+          class="css-1m8z7nf-NewParticipant"
+        >
+          <div
+            class="css-195vmrj-Cell"
+          >
+            <input
+              class="css-17f5ri4-Input"
+              name="name"
+              placeholder="Full name"
+              value=""
+            />
+          </div>
+          <div
+            class="css-195vmrj-Cell"
+          >
+            <input
+              class="css-17f5ri4-Input"
+              name="email"
+              placeholder="E-mail address"
+              type="email"
+              value=""
+            />
+          </div>
+          <div
+            class="css-195vmrj-Cell"
+          >
+            <input
+              class="css-17f5ri4-Input"
+              name="phone"
+              placeholder="Phone number"
+              type="tel"
+              value=""
+            />
+          </div>
+          <div
+            class="css-195vmrj-Cell"
+          >
+            <button
+              class="css-3ox8zq"
+              color="primary"
+              type="submit"
+            >
+              Add new
+            </button>
+          </div>
+        </div>
+      </div>
+    </form>
+    <div
+      class="css-qjyi4g-Table"
+    >
+      <div
+        class="css-1ub16qz-ParticipantList"
+      >
+        <div
+          class="css-195vmrj-Cell"
+        >
+          <span
+            class="css-m8ub5d"
+          >
+            Name
+          </span>
+        </div>
+        <div
+          class="css-195vmrj-Cell"
+        >
+          <span
+            class="css-m8ub5d"
+          >
+            E-mail address
+          </span>
+        </div>
+        <div
+          class="css-195vmrj-Cell"
+        >
+          <span
+            class="css-m8ub5d"
+          >
+            Phone number
+          </span>
+        </div>
+        <div
+          class="css-195vmrj-Cell"
+        />
+      </div>
+      <div
+        class="css-otiz8p-DisplayParticipant"
+      >
+        <div
+          class="css-195vmrj-Cell"
+        >
+          John Doe
+        </div>
+        <div
+          class="css-195vmrj-Cell"
+        >
+          john.doe@example.com
+        </div>
+        <div
+          class="css-195vmrj-Cell"
+        >
+          0441111111
+        </div>
+        <div
+          class="css-195vmrj-Cell"
+        >
+          <button
+            class="css-s6bjet"
+            data-testid="edit-john-doe-id"
+          >
+            <svg
+              fill="currentColor"
+              focusable="false"
+              height="48"
+              role="img"
+              viewBox="0 0 24 24"
+              width="48"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title>
+                Edit icon
+              </title>
+              <path
+                d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04a.996.996 0 000-1.41l-2.34-2.34a.996.996 0 00-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+              />
+              <path
+                d="M0 0h24v24H0z"
+                fill="none"
+              />
+            </svg>
+          </button>
+          <button
+            class="css-s6bjet"
+            data-testid="delete-john-doe-id"
+          >
+            <svg
+              fill="currentColor"
+              focusable="false"
+              height="48"
+              role="img"
+              viewBox="0 0 24 24"
+              width="48"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title>
+                Delete icon
+              </title>
+              <path
+                d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+              />
+              <path
+                d="M0 0h24v24H0z"
+                fill="none"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div
+        class="css-otiz8p-DisplayParticipant"
+      >
+        <div
+          class="css-195vmrj-Cell"
+        >
+          Kaycee Cimah
+        </div>
+        <div
+          class="css-195vmrj-Cell"
+        >
+          kaycee.cimah@example.com
+        </div>
+        <div
+          class="css-195vmrj-Cell"
+        >
+          8468361594
+        </div>
+        <div
+          class="css-195vmrj-Cell"
+        >
+          <button
+            class="css-s6bjet"
+            data-testid="edit-e732f945-3eed-42d0-9b77-381c232a98dc"
+          >
+            <svg
+              fill="currentColor"
+              focusable="false"
+              height="48"
+              role="img"
+              viewBox="0 0 24 24"
+              width="48"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title>
+                Edit icon
+              </title>
+              <path
+                d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04a.996.996 0 000-1.41l-2.34-2.34a.996.996 0 00-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+              />
+              <path
+                d="M0 0h24v24H0z"
+                fill="none"
+              />
+            </svg>
+          </button>
+          <button
+            class="css-s6bjet"
+            data-testid="delete-e732f945-3eed-42d0-9b77-381c232a98dc"
+          >
+            <svg
+              fill="currentColor"
+              focusable="false"
+              height="48"
+              role="img"
+              viewBox="0 0 24 24"
+              width="48"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title>
+                Delete icon
+              </title>
+              <path
+                d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+              />
+              <path
+                d="M0 0h24v24H0z"
+                fill="none"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div
+        class="css-otiz8p-DisplayParticipant"
+      >
+        <div
+          class="css-195vmrj-Cell"
+        >
+          Jemimah McLain
+        </div>
+        <div
+          class="css-195vmrj-Cell"
+        >
+          jemimah.mclain@example.com
+        </div>
+        <div
+          class="css-195vmrj-Cell"
+        >
+          8738048768
+        </div>
+        <div
+          class="css-195vmrj-Cell"
+        >
+          <button
+            class="css-s6bjet"
+            data-testid="edit-2e987437-a4b4-46f5-b93b-ec2e2b5b15a5"
+          >
+            <svg
+              fill="currentColor"
+              focusable="false"
+              height="48"
+              role="img"
+              viewBox="0 0 24 24"
+              width="48"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title>
+                Edit icon
+              </title>
+              <path
+                d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04a.996.996 0 000-1.41l-2.34-2.34a.996.996 0 00-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+              />
+              <path
+                d="M0 0h24v24H0z"
+                fill="none"
+              />
+            </svg>
+          </button>
+          <button
+            class="css-s6bjet"
+            data-testid="delete-2e987437-a4b4-46f5-b93b-ec2e2b5b15a5"
+          >
+            <svg
+              fill="currentColor"
+              focusable="false"
+              height="48"
+              role="img"
+              viewBox="0 0 24 24"
+              width="48"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title>
+                Delete icon
+              </title>
+              <path
+                d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+              />
+              <path
+                d="M0 0h24v24H0z"
+                fill="none"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div
+        class="css-otiz8p-DisplayParticipant"
+      >
+        <div
+          class="css-195vmrj-Cell"
+        >
+          Frank Queridas
+        </div>
+        <div
+          class="css-195vmrj-Cell"
+        >
+          frank.queridas@example.com
+        </div>
+        <div
+          class="css-195vmrj-Cell"
+        >
+          6086265451
+        </div>
+        <div
+          class="css-195vmrj-Cell"
+        >
+          <button
+            class="css-s6bjet"
+            data-testid="edit-6232da7f-b973-4ec1-bc1d-efc58b767d1c"
+          >
+            <svg
+              fill="currentColor"
+              focusable="false"
+              height="48"
+              role="img"
+              viewBox="0 0 24 24"
+              width="48"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title>
+                Edit icon
+              </title>
+              <path
+                d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04a.996.996 0 000-1.41l-2.34-2.34a.996.996 0 00-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+              />
+              <path
+                d="M0 0h24v24H0z"
+                fill="none"
+              />
+            </svg>
+          </button>
+          <button
+            class="css-s6bjet"
+            data-testid="delete-6232da7f-b973-4ec1-bc1d-efc58b767d1c"
+          >
+            <svg
+              fill="currentColor"
+              focusable="false"
+              height="48"
+              role="img"
+              viewBox="0 0 24 24"
+              width="48"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title>
+                Delete icon
+              </title>
+              <path
+                d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+              />
+              <path
+                d="M0 0h24v24H0z"
+                fill="none"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div
+        class="css-otiz8p-DisplayParticipant"
+      >
+        <div
+          class="css-195vmrj-Cell"
+        >
+          Filide Loring
+        </div>
+        <div
+          class="css-195vmrj-Cell"
+        >
+          filide.loring@example.com
+        </div>
+        <div
+          class="css-195vmrj-Cell"
+        >
+          4784651204
+        </div>
+        <div
+          class="css-195vmrj-Cell"
+        >
+          <button
+            class="css-s6bjet"
+            data-testid="edit-2a525e5d-3018-42c9-9896-9babe60dc144"
+          >
+            <svg
+              fill="currentColor"
+              focusable="false"
+              height="48"
+              role="img"
+              viewBox="0 0 24 24"
+              width="48"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title>
+                Edit icon
+              </title>
+              <path
+                d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04a.996.996 0 000-1.41l-2.34-2.34a.996.996 0 00-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+              />
+              <path
+                d="M0 0h24v24H0z"
+                fill="none"
+              />
+            </svg>
+          </button>
+          <button
+            class="css-s6bjet"
+            data-testid="delete-2a525e5d-3018-42c9-9896-9babe60dc144"
+          >
+            <svg
+              fill="currentColor"
+              focusable="false"
+              height="48"
+              role="img"
+              viewBox="0 0 24 24"
+              width="48"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title>
+                Delete icon
+              </title>
+              <path
+                d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+              />
+              <path
+                d="M0 0h24v24H0z"
+                fill="none"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
