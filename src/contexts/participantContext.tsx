@@ -1,7 +1,7 @@
 import React from 'react';
 import { v4 as id } from 'uuid';
 import { Person, PersonWithId } from 'interfaces/Person';
-import { initialState } from './initialState';
+import { generateParticipants } from './generateParticipants';
 
 type ParticipantState = PersonWithId[];
 
@@ -45,7 +45,13 @@ const participantReducer = (state: ParticipantState, action: Action) => {
   }
 };
 
-export const ParticipantProvider: React.FC = ({ children }) => {
+interface ParticipantProviderProps {
+  initialState?: PersonWithId[];
+}
+export const ParticipantProvider: React.FC<ParticipantProviderProps> = ({
+  children,
+  initialState = generateParticipants(),
+}) => {
   const [state, dispatch] = React.useReducer<React.Reducer<ParticipantState, Action>>(participantReducer, initialState);
 
   const value = React.useMemo(() => ({ state, dispatch }), [state]);
@@ -62,7 +68,10 @@ export const useParticipantContext = () => {
   const { state, dispatch } = context;
 
   const addParticipant = (participant: Person) => {
-    dispatch({ type: 'ADD_PARTICIPANT', payload: { id: id(), ...participant } });
+    dispatch({
+      type: 'ADD_PARTICIPANT',
+      payload: { id: id(), ...participant },
+    });
   };
 
   const removeParticipant = (id: string) => {

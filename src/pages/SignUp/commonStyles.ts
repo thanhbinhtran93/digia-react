@@ -13,4 +13,7 @@ export const rowCellCss = css`
   & > :last-of-type {
     flex: 1 1 21%;
   }
+  & input {
+    margin-right: 1rem;
+  }
 `;

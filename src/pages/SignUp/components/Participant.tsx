@@ -1,13 +1,13 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core';
 import React from 'react';
-import { PersonWithId } from 'interfaces/Person';
 import styled from '@emotion/styled';
+import { PersonWithId } from 'interfaces/Person';
 import { useParticipantContext } from 'contexts/participantContext';
 import { useFormik } from 'formik';
 import { participantSchema } from 'vadilators/participant-validator';
-import { Button } from '../../../components/Button';
-import { Table } from '../../../components/Table';
+import { Button } from 'components/Button';
+import { Table } from 'components/Table';
 import { rowCellCss } from '../commonStyles';
 import { Input } from 'components/Input';
 import { EditIcon, DeleteIcon } from 'components/Icons';
@@ -36,29 +36,16 @@ export const Participant: React.FC<ParticipantProps> = ({ participant }) => {
   const toggleEditing = () => setEditing((prev) => !prev);
 
   if (isEditing) {
-    return (
-      <EditParticipant
-        participant={participant}
-        onToggleEditing={toggleEditing}
-      />
-    );
+    return <EditParticipant participant={participant} onToggleEditing={toggleEditing} />;
   }
-  return (
-    <DisplayParticipant
-      participant={participant}
-      onToggleEditing={toggleEditing}
-    />
-  );
+  return <DisplayParticipant participant={participant} onToggleEditing={toggleEditing} />;
 };
 
 interface DisplayParticipantProps extends ParticipantProps {
   onToggleEditing: () => void;
 }
 
-const DisplayParticipant: React.FC<DisplayParticipantProps> = ({
-  participant,
-  onToggleEditing,
-}) => {
+const DisplayParticipant: React.FC<DisplayParticipantProps> = ({ participant, onToggleEditing }) => {
   const { removeParticipant } = useParticipantContext();
   const handleRemove = () => {
     removeParticipant(participant.id);
@@ -79,10 +66,10 @@ const DisplayParticipant: React.FC<DisplayParticipantProps> = ({
       <Table.Cell>{participant.email}</Table.Cell>
       <Table.Cell>{participant.phone}</Table.Cell>
       <Table.Cell>
-        <IconButton onClick={onToggleEditing}>
+        <IconButton onClick={onToggleEditing} data-testid={`edit-${participant.id}`}>
           <EditIcon />
         </IconButton>
-        <IconButton onClick={handleRemove}>
+        <IconButton onClick={handleRemove} data-testid={`delete-${participant.id}`}>
           <DeleteIcon />
         </IconButton>
       </Table.Cell>
@@ -97,11 +84,7 @@ interface EditParticipantProps extends ParticipantProps {
   onToggleEditing: () => void;
 }
 
-const EditParticipant: React.FC<EditParticipantProps> = ({
-  participant,
-  onToggleEditing,
-  ...props
-}) => {
+const EditParticipant: React.FC<EditParticipantProps> = ({ participant, onToggleEditing, ...props }) => {
   const { editParticipant } = useParticipantContext();
 
   const formik = useFormik<PersonWithId>({
@@ -127,6 +110,7 @@ const EditParticipant: React.FC<EditParticipantProps> = ({
           <Input
             placeholder="Full name"
             name="name"
+            error={formik.errors.name && formik.touched.name}
             value={formik.values.name}
             onChange={formik.handleChange}
           />
@@ -136,6 +120,7 @@ const EditParticipant: React.FC<EditParticipantProps> = ({
             placeholder="E-mail address"
             type="email"
             name="email"
+            error={formik.errors.email && formik.touched.email}
             value={formik.values.email}
             onChange={formik.handleChange}
           />
@@ -145,6 +130,7 @@ const EditParticipant: React.FC<EditParticipantProps> = ({
             placeholder="Phone number"
             type="tel"
             name="phone"
+            error={formik.errors.phone && formik.touched.phone}
             value={formik.values.phone}
             onChange={formik.handleChange}
           />

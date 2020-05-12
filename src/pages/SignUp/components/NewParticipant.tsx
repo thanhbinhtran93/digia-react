@@ -6,11 +6,9 @@ import { useFormik } from 'formik';
 import { useParticipantContext } from 'contexts/participantContext';
 import { Person } from 'interfaces/Person';
 import { participantSchema } from 'vadilators/participant-validator';
-import styled from '@emotion/styled';
-import { Table } from '../../../components/Table';
-import { Button } from '../../../components/Button';
+import { Table } from 'components/Table';
+import { Button } from 'components/Button';
 import { Input } from 'components/Input';
-
 import { rowCellCss } from '../commonStyles';
 
 const getInitialForm = (): Person => {
@@ -20,10 +18,6 @@ const getInitialForm = (): Person => {
     phone: '',
   };
 };
-
-const Form = styled('form')`
-  width: 100%;
-`;
 
 export const NewParticipant: React.FC = (props) => {
   const { addParticipant } = useParticipantContext();
@@ -38,7 +32,13 @@ export const NewParticipant: React.FC = (props) => {
   });
 
   return (
-    <Form onSubmit={formik.handleSubmit} {...props}>
+    <form
+      onSubmit={formik.handleSubmit}
+      {...props}
+      css={css`
+        width: 100%;
+      `}
+    >
       {/**TODO: show error */}
       <Table>
         <Table.Row
@@ -51,6 +51,7 @@ export const NewParticipant: React.FC = (props) => {
             <Input
               placeholder="Full name"
               name="name"
+              error={formik.errors.name && formik.touched.name}
               value={formik.values.name}
               onChange={formik.handleChange}
             />
@@ -60,6 +61,7 @@ export const NewParticipant: React.FC = (props) => {
               placeholder="E-mail address"
               type="email"
               name="email"
+              error={formik.errors.email && formik.touched.email}
               value={formik.values.email}
               onChange={formik.handleChange}
             />
@@ -69,6 +71,7 @@ export const NewParticipant: React.FC = (props) => {
               placeholder="Phone number"
               type="tel"
               name="phone"
+              error={formik.errors.phone && formik.touched.phone}
               value={formik.values.phone}
               onChange={formik.handleChange}
             />
@@ -78,6 +81,6 @@ export const NewParticipant: React.FC = (props) => {
           </Table.Cell>
         </Table.Row>
       </Table>
-    </Form>
+    </form>
   );
 };

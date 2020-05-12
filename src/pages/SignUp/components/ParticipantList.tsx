@@ -1,11 +1,12 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core';
 import React from 'react';
+
 import { useParticipantContext } from 'contexts/participantContext';
 import { PersonWithId } from 'interfaces/Person';
-import { ArrowIcon } from '../../../components/ArrowIcon';
+import { ArrowIcon } from 'components/ArrowIcon';
+import { Table } from 'components/Table';
 import { useSortableData } from 'hooks/useSortableData';
-import { Table } from '../../../components/Table';
 import { Participant } from './Participant';
 import { rowCellCss } from '../commonStyles';
 
@@ -30,9 +31,9 @@ const headers: Header[] = [
 
 export const ParticipantList: React.FC = () => {
   const { participants } = useParticipantContext();
-  const { items, sort, sortConfig } = useSortableData<PersonWithId>(
-    participants,
-  );
+  const { items, sort, currentSortedKey, isSortedDesc } = useSortableData<
+    PersonWithId
+  >(participants);
 
   return (
     <Table>
@@ -43,10 +44,10 @@ export const ParticipantList: React.FC = () => {
           ${rowCellCss};
         `}
       >
-        {headers.map((item) => (
-          <Table.Cell key={item.key}>
+        {headers.map((header) => (
+          <Table.Cell key={header.key}>
             <span
-              onClick={() => sort(item.key)}
+              onClick={() => sort({ sortedKey: header.key })}
               css={css`
                 cursor: pointer;
                 display: flex;
@@ -56,9 +57,9 @@ export const ParticipantList: React.FC = () => {
                 }
               `}
             >
-              {item.label}
-              {sortConfig?.key === item.key ? (
-                <ArrowIcon direction={sortConfig.direction} />
+              {header.label}
+              {currentSortedKey === header.key ? (
+                <ArrowIcon direction={isSortedDesc ? 'desc' : 'asc'} />
               ) : null}
             </span>
           </Table.Cell>
