@@ -24,6 +24,7 @@ export const Hero: React.FC = () => {
       <h1
         css={css`
           color: #ffffff;
+          line-height: 2rem;
         `}
       >
         Iord Software

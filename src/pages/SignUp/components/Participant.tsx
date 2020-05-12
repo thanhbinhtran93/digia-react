@@ -7,7 +7,24 @@ import { useParticipantContext } from 'contexts/participantContext';
 import { useFormik } from 'formik';
 import { participantSchema } from 'vadilators/participant-validator';
 import { Button } from '../../../components/Button';
-import { Table } from '../../../components/data-table';
+import { Table } from '../../../components/Table';
+import { rowCellCss } from '../commonStyles';
+import { Input } from 'components/Input';
+import { EditIcon, DeleteIcon } from 'components/Icons';
+
+const IconButton = styled.button`
+  border: none;
+  background: none;
+  outline: none;
+  padding: 0 0.5rem;
+  height: 1.5rem;
+  color: #909090;
+  cursor: pointer;
+  & > svg {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+`;
 
 interface ParticipantProps {
   participant: PersonWithId;
@@ -46,20 +63,7 @@ const DisplayParticipant: React.FC<DisplayParticipantProps> = ({
   const handleRemove = () => {
     removeParticipant(participant.id);
   };
-  const childCss = css`
-    & > :first-of-type {
-      flex: 1 1 20%;
-    }
-    & > :nth-of-type(2) {
-      flex: 1 1 35%;
-    }
-    & > :nth-of-type(3) {
-      flex: 1 1 25%;
-    }
-    & > :last-of-type {
-      flex: 1 1 20%;
-    }
-  `;
+
   return (
     <Table.Row
       key={participant.id}
@@ -68,15 +72,19 @@ const DisplayParticipant: React.FC<DisplayParticipantProps> = ({
         padding: 1.5rem;
         line-height: 1.5rem;
         font-weight: 400;
-        ${childCss};
+        ${rowCellCss};
       `}
     >
       <Table.Cell>{participant.name}</Table.Cell>
       <Table.Cell>{participant.email}</Table.Cell>
       <Table.Cell>{participant.phone}</Table.Cell>
       <Table.Cell>
-        <button onClick={onToggleEditing}>edit</button>
-        <button onClick={handleRemove}>delete</button>
+        <IconButton onClick={onToggleEditing}>
+          <EditIcon />
+        </IconButton>
+        <IconButton onClick={handleRemove}>
+          <DeleteIcon />
+        </IconButton>
       </Table.Cell>
     </Table.Row>
   );
@@ -111,10 +119,12 @@ const EditParticipant: React.FC<EditParticipantProps> = ({
       <Table.Row
         css={css`
           padding: 1rem;
+          border-bottom: 1px solid #f5f5f5;
+          ${rowCellCss};
         `}
       >
         <Table.Cell>
-          <input
+          <Input
             placeholder="Full name"
             name="name"
             value={formik.values.name}
@@ -122,7 +132,7 @@ const EditParticipant: React.FC<EditParticipantProps> = ({
           />
         </Table.Cell>
         <Table.Cell>
-          <input
+          <Input
             placeholder="E-mail address"
             type="email"
             name="email"
@@ -131,7 +141,7 @@ const EditParticipant: React.FC<EditParticipantProps> = ({
           />
         </Table.Cell>
         <Table.Cell>
-          <input
+          <Input
             placeholder="Phone number"
             type="tel"
             name="phone"
@@ -151,30 +161,3 @@ const EditParticipant: React.FC<EditParticipantProps> = ({
     </Form>
   );
 };
-{
-  /* <form onSubmit={formik.handleSubmit}>
-      
-      <input
-        placeholder="Full name"
-        name="name"
-        value={formik.values.name}
-        onChange={formik.handleChange}
-      />
-      <input
-        placeholder="E-mail address"
-        type="email"
-        name="email"
-        value={formik.values.email}
-        onChange={formik.handleChange}
-      />
-      <input
-        placeholder="Phone number"
-        type="tel"
-        name="phone"
-        value={formik.values.phone}
-        onChange={formik.handleChange}
-      />
-     
-    </form>
- */
-}

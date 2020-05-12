@@ -7,8 +7,11 @@ import { useParticipantContext } from 'contexts/participantContext';
 import { Person } from 'interfaces/Person';
 import { participantSchema } from 'vadilators/participant-validator';
 import styled from '@emotion/styled';
-import { Table } from '../../../components/data-table';
+import { Table } from '../../../components/Table';
 import { Button } from '../../../components/Button';
+import { Input } from 'components/Input';
+
+import { rowCellCss } from '../commonStyles';
 
 const getInitialForm = (): Person => {
   return {
@@ -41,10 +44,11 @@ export const NewParticipant: React.FC = (props) => {
         <Table.Row
           css={css`
             padding: 1rem;
+            ${rowCellCss};
           `}
         >
           <Table.Cell>
-            <input
+            <Input
               placeholder="Full name"
               name="name"
               value={formik.values.name}
@@ -52,7 +56,7 @@ export const NewParticipant: React.FC = (props) => {
             />
           </Table.Cell>
           <Table.Cell>
-            <input
+            <Input
               placeholder="E-mail address"
               type="email"
               name="email"
@@ -61,7 +65,7 @@ export const NewParticipant: React.FC = (props) => {
             />
           </Table.Cell>
           <Table.Cell>
-            <input
+            <Input
               placeholder="Phone number"
               type="tel"
               name="phone"
