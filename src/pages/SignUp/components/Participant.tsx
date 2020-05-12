@@ -18,9 +18,9 @@ const IconButton = styled.button`
   outline: none;
   padding: 0 0.5rem;
   height: 1.5rem;
-  color: #909090;
   cursor: pointer;
   & > svg {
+    fill: #909090;
     width: 1.5rem;
     height: 1.5rem;
   }

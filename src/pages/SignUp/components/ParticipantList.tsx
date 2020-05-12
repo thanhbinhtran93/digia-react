@@ -24,7 +24,7 @@ const headers: Header[] = [
   },
   {
     key: 'phone',
-    label: 'Phone',
+    label: 'Phone number',
   },
 ];
 
@@ -45,7 +45,17 @@ export const ParticipantList: React.FC = () => {
       >
         {headers.map((item) => (
           <Table.Cell key={item.key}>
-            <span onClick={() => sort(item.key)}>
+            <span
+              onClick={() => sort(item.key)}
+              css={css`
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                & > svg {
+                  height: 1rem;
+                }
+              `}
+            >
               {item.label}
               {sortConfig?.key === item.key ? (
                 <ArrowIcon direction={sortConfig.direction} />

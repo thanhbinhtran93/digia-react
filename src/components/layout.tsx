@@ -10,14 +10,18 @@ export const globalStyles = css`
   body {
     margin: 0;
     color: #555;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif,
-      'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+      Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+      'Segoe UI Symbol';
     font-size: 16px;
     line-height: 1.4;
     background-color: #f5f5f5;
   }
   h1 {
     margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 1.5rem;
   }
 `;
 
