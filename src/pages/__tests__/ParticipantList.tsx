@@ -8,8 +8,9 @@ import { PersonWithId } from 'interfaces/Person';
 
 it('Edit a row', async () => {
   const { wrapper, editBtn, deleteBtn } = setup();
-  await userEvent.click(editBtn);
+  expect(wrapper).toMatchSnapshot();
 
+  await userEvent.click(editBtn);
   const saveBtn = wrapper.getByText(/save/i);
   const nameInput = wrapper.getByDisplayValue(/john doe/i);
   const emailInput = wrapper.getByDisplayValue(/john.doe@example.com/i);
