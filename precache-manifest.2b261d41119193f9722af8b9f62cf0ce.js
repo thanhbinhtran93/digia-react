@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c0620d990983ea93264a87f21b8788d2",
+    "revision": "0d281290da026414975aa50a70169859",
     "url": "/digia-react/index.html"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/digia-react/static/js/2.e1020502.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "ac65c43e1f3915cce5e5",
-    "url": "/digia-react/static/js/main.0fa602ed.chunk.js"
+    "revision": "e71550883626f4c70471",
+    "url": "/digia-react/static/js/main.3e43fd46.chunk.js"
   },
   {
     "revision": "3ae0eb4912ee894970e0",

@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/digia-react/precache-manifest.126138f0261f7df54f5053c49f889bca.js"
+  "/digia-react/precache-manifest.2b261d41119193f9722af8b9f62cf0ce.js"
 );
 
 self.addEventListener('message', (event) => {
