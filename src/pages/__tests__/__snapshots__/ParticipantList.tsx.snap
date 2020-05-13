@@ -1,65 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Edit a row 1`] = `
+exports[`Should match snapshot 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <form
-        class="css-1fk24ga-NewParticipant"
-      >
-        <div
-          class="css-qjyi4g-Table"
-        >
-          <div
-            class="css-1m8z7nf-NewParticipant"
-          >
-            <div
-              class="css-195vmrj-Cell"
-            >
-              <input
-                class="css-17f5ri4-Input"
-                name="name"
-                placeholder="Full name"
-                value=""
-              />
-            </div>
-            <div
-              class="css-195vmrj-Cell"
-            >
-              <input
-                class="css-17f5ri4-Input"
-                name="email"
-                placeholder="E-mail address"
-                type="email"
-                value=""
-              />
-            </div>
-            <div
-              class="css-195vmrj-Cell"
-            >
-              <input
-                class="css-17f5ri4-Input"
-                name="phone"
-                placeholder="Phone number"
-                type="tel"
-                value=""
-              />
-            </div>
-            <div
-              class="css-195vmrj-Cell"
-            >
-              <button
-                class="css-3ox8zq"
-                color="primary"
-                type="submit"
-              >
-                Add new
-              </button>
-            </div>
-          </div>
-        </div>
-      </form>
       <div
         class="css-qjyi4g-Table"
       >
@@ -71,6 +16,7 @@ Object {
           >
             <span
               class="css-m8ub5d"
+              data-testid="sortBy-name"
             >
               Name
             </span>
@@ -80,6 +26,7 @@ Object {
           >
             <span
               class="css-m8ub5d"
+              data-testid="sortBy-email"
             >
               E-mail address
             </span>
@@ -89,6 +36,7 @@ Object {
           >
             <span
               class="css-m8ub5d"
+              data-testid="sortBy-phone"
             >
               Phone number
             </span>
@@ -102,6 +50,7 @@ Object {
         >
           <div
             class="css-195vmrj-Cell"
+            data-testid="participant-name"
           >
             John Doe
           </div>
@@ -175,18 +124,19 @@ Object {
         >
           <div
             class="css-195vmrj-Cell"
+            data-testid="participant-name"
           >
-            Kaycee Cimah
+            Binh
           </div>
           <div
             class="css-195vmrj-Cell"
           >
-            kaycee.cimah@example.com
+            binh@example.com
           </div>
           <div
             class="css-195vmrj-Cell"
           >
-            8468361594
+            0441111115
           </div>
           <div
             class="css-195vmrj-Cell"
@@ -248,18 +198,19 @@ Object {
         >
           <div
             class="css-195vmrj-Cell"
+            data-testid="participant-name"
           >
-            Jemimah McLain
+            An
           </div>
           <div
             class="css-195vmrj-Cell"
           >
-            jemimah.mclain@example.com
+            an@example.com
           </div>
           <div
             class="css-195vmrj-Cell"
           >
-            8738048768
+            0441111134
           </div>
           <div
             class="css-195vmrj-Cell"
@@ -321,18 +272,19 @@ Object {
         >
           <div
             class="css-195vmrj-Cell"
+            data-testid="participant-name"
           >
-            Frank Queridas
+            Frank
           </div>
           <div
             class="css-195vmrj-Cell"
           >
-            frank.queridas@example.com
+            frank@example.com
           </div>
           <div
             class="css-195vmrj-Cell"
           >
-            6086265451
+            0441111145
           </div>
           <div
             class="css-195vmrj-Cell"
@@ -394,13 +346,14 @@ Object {
         >
           <div
             class="css-195vmrj-Cell"
+            data-testid="participant-name"
           >
-            Filide Loring
+            West
           </div>
           <div
             class="css-195vmrj-Cell"
           >
-            filide.loring@example.com
+            west@example.com
           </div>
           <div
             class="css-195vmrj-Cell"
@@ -466,61 +419,6 @@ Object {
     </div>
   </body>,
   "container": <div>
-    <form
-      class="css-1fk24ga-NewParticipant"
-    >
-      <div
-        class="css-qjyi4g-Table"
-      >
-        <div
-          class="css-1m8z7nf-NewParticipant"
-        >
-          <div
-            class="css-195vmrj-Cell"
-          >
-            <input
-              class="css-17f5ri4-Input"
-              name="name"
-              placeholder="Full name"
-              value=""
-            />
-          </div>
-          <div
-            class="css-195vmrj-Cell"
-          >
-            <input
-              class="css-17f5ri4-Input"
-              name="email"
-              placeholder="E-mail address"
-              type="email"
-              value=""
-            />
-          </div>
-          <div
-            class="css-195vmrj-Cell"
-          >
-            <input
-              class="css-17f5ri4-Input"
-              name="phone"
-              placeholder="Phone number"
-              type="tel"
-              value=""
-            />
-          </div>
-          <div
-            class="css-195vmrj-Cell"
-          >
-            <button
-              class="css-3ox8zq"
-              color="primary"
-              type="submit"
-            >
-              Add new
-            </button>
-          </div>
-        </div>
-      </div>
-    </form>
     <div
       class="css-qjyi4g-Table"
     >
@@ -532,6 +430,7 @@ Object {
         >
           <span
             class="css-m8ub5d"
+            data-testid="sortBy-name"
           >
             Name
           </span>
@@ -541,6 +440,7 @@ Object {
         >
           <span
             class="css-m8ub5d"
+            data-testid="sortBy-email"
           >
             E-mail address
           </span>
@@ -550,6 +450,7 @@ Object {
         >
           <span
             class="css-m8ub5d"
+            data-testid="sortBy-phone"
           >
             Phone number
           </span>
@@ -563,6 +464,7 @@ Object {
       >
         <div
           class="css-195vmrj-Cell"
+          data-testid="participant-name"
         >
           John Doe
         </div>
@@ -636,18 +538,19 @@ Object {
       >
         <div
           class="css-195vmrj-Cell"
+          data-testid="participant-name"
         >
-          Kaycee Cimah
+          Binh
         </div>
         <div
           class="css-195vmrj-Cell"
         >
-          kaycee.cimah@example.com
+          binh@example.com
         </div>
         <div
           class="css-195vmrj-Cell"
         >
-          8468361594
+          0441111115
         </div>
         <div
           class="css-195vmrj-Cell"
@@ -709,18 +612,19 @@ Object {
       >
         <div
           class="css-195vmrj-Cell"
+          data-testid="participant-name"
         >
-          Jemimah McLain
+          An
         </div>
         <div
           class="css-195vmrj-Cell"
         >
-          jemimah.mclain@example.com
+          an@example.com
         </div>
         <div
           class="css-195vmrj-Cell"
         >
-          8738048768
+          0441111134
         </div>
         <div
           class="css-195vmrj-Cell"
@@ -782,18 +686,19 @@ Object {
       >
         <div
           class="css-195vmrj-Cell"
+          data-testid="participant-name"
         >
-          Frank Queridas
+          Frank
         </div>
         <div
           class="css-195vmrj-Cell"
         >
-          frank.queridas@example.com
+          frank@example.com
         </div>
         <div
           class="css-195vmrj-Cell"
         >
-          6086265451
+          0441111145
         </div>
         <div
           class="css-195vmrj-Cell"
@@ -855,13 +760,14 @@ Object {
       >
         <div
           class="css-195vmrj-Cell"
+          data-testid="participant-name"
         >
-          Filide Loring
+          West
         </div>
         <div
           class="css-195vmrj-Cell"
         >
-          filide.loring@example.com
+          west@example.com
         </div>
         <div
           class="css-195vmrj-Cell"
