@@ -3,17 +3,11 @@ import { jsx, css } from '@emotion/core';
 import React from 'react';
 
 interface InputHtmlProps
-  extends React.DetailedHTMLProps<
-    React.InputHTMLAttributes<HTMLInputElement>,
-    HTMLInputElement
-  > {
+  extends React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement> {
   error?: boolean | string;
 }
 
-export const Input: React.FC<InputHtmlProps> = ({
-  error = false,
-  ...props
-}) => {
+export const Input: React.FC<InputHtmlProps> = ({ error = false, ...props }) => {
   return (
     <input
       css={css`

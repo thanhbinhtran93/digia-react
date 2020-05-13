@@ -62,7 +62,7 @@ const DisplayParticipant: React.FC<DisplayParticipantProps> = ({ participant, on
         ${rowCellCss};
       `}
     >
-      <Table.Cell>{participant.name}</Table.Cell>
+      <Table.Cell data-testid="participant-name">{participant.name}</Table.Cell>
       <Table.Cell>{participant.email}</Table.Cell>
       <Table.Cell>{participant.phone}</Table.Cell>
       <Table.Cell>

@@ -6,10 +6,7 @@ import styled from '@emotion/styled';
 type ButtonColorType = 'primary' | 'inverted' | 'blue';
 
 interface ButtonProps
-  extends React.DetailedHTMLProps<
-    React.ButtonHTMLAttributes<HTMLButtonElement>,
-    HTMLButtonElement
-  > {
+  extends React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
   color?: ButtonColorType;
 }
 
@@ -44,11 +41,7 @@ const StyledButton = styled.button<ButtonProps>`
   outline: none;
 `;
 
-export const Button: React.FC<ButtonProps> = ({
-  children,
-  color = 'primary',
-  ...props
-}) => {
+export const Button: React.FC<ButtonProps> = ({ children, color = 'primary', ...props }) => {
   return (
     <StyledButton color={color} {...props}>
       {children}

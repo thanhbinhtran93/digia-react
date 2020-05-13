@@ -28,12 +28,11 @@ const headers: Header[] = [
     label: 'Phone number',
   },
 ];
-
 export const ParticipantList: React.FC = () => {
   const { participants } = useParticipantContext();
-  const { items, sort, currentSortedKey, isSortedDesc } = useSortableData<
-    PersonWithId
-  >(participants);
+  const { items: sortedParticipants, sort, currentSortedKey, isSortedDesc } = useSortableData<PersonWithId>(
+    participants,
+  );
 
   return (
     <Table>
@@ -48,6 +47,7 @@ export const ParticipantList: React.FC = () => {
           <Table.Cell key={header.key}>
             <span
               onClick={() => sort({ sortedKey: header.key })}
+              data-testid={`sortBy-${header.key}`}
               css={css`
                 cursor: pointer;
                 display: flex;
@@ -58,16 +58,14 @@ export const ParticipantList: React.FC = () => {
               `}
             >
               {header.label}
-              {currentSortedKey === header.key ? (
-                <ArrowIcon direction={isSortedDesc ? 'desc' : 'asc'} />
-              ) : null}
+              {currentSortedKey === header.key ? <ArrowIcon direction={isSortedDesc ? 'desc' : 'asc'} /> : null}
             </span>
           </Table.Cell>
         ))}
         <Table.Cell />
       </Table.RowHeader>
 
-      {items.map((participant) => (
+      {sortedParticipants.map((participant) => (
         <Participant key={participant.id} participant={participant} />
       ))}
     </Table>

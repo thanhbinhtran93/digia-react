@@ -41,4 +41,4 @@ Before the deployment, `predeploy` is run which runs tests, linting, and builds 
 
 The project uses [husky](https://github.com/typicode/husky)
 and [lint-staged](https://github.com/okonet/lint-staged)
-to run lint, test, and format staged files
+to run lint, and format staged files

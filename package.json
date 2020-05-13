@@ -38,7 +38,7 @@
     "jest-environment-jsdom-sixteen": "^1.0.3"
   },
   "scripts": {
-    "predeploy": "npm run test && npm run lint && npm run build",
+    "predeploy": "CI=true npm run test && npm run lint && npm run build",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -78,8 +78,7 @@
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
-      "eslint",
-      "CI=true npm run test"
+      "eslint"
     ],
     "src/**/*.{js|jsx|json|yml|yaml|css|less|scss|ts|tsx|md|graphql|mdx}": [
       "prettier --write"
