@@ -2,6 +2,7 @@
   "name": "digia-react",
   "author": "thanhbinh.tran93@gmail.com",
   "version": "0.1.0",
+  "homepage": "https://thanhbinhtran93.github.io/digia-react",
   "private": true,
   "dependencies": {
     "@emotion/core": "^10.0.28",
@@ -15,6 +16,7 @@
     "@types/react-dom": "^16.9.7",
     "@types/yup": "^0.28.1",
     "formik": "^2.1.4",
+    "gh-pages": "^2.2.0",
     "husky": "^4.2.5",
     "lint-staged": "^10.2.2",
     "prettier": "^2.0.5",
@@ -35,6 +37,8 @@
     "jest-environment-jsdom-sixteen": "^1.0.3"
   },
   "scripts": {
+    "predeploy": "npm run test && npm run lint && npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jest-environment-jsdom-sixteen",
