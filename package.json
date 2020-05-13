@@ -33,6 +33,7 @@
   "devDependencies": {
     "@types/react-helmet": "^5.0.15",
     "@types/uuid": "^7.0.3",
+    "cross-env": "^7.0.2",
     "eslint-plugin-emotion": "^10.0.27",
     "jest-environment-jsdom-sixteen": "^1.0.3"
   },
@@ -78,7 +79,7 @@
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
       "eslint",
-      "jest --findRelatedTests"
+      "CI=true npm run test"
     ],
     "src/**/*.{js|jsx|json|yml|yaml|css|less|scss|ts|tsx|md|graphql|mdx}": [
       "prettier --write"
