@@ -1,44 +1,44 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Digia React
 
-## Available Scripts
+This project is bootstrapped with [Create React App](./CRA.md)
 
-In the project directory, you can run:
+## Available scripts
 
-### `npm start`
+### From Create React App
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+`npm install`
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Install the dependencies.
 
-### `npm test`
+`npm run start`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Start the development server.
 
-### `npm run build`
+`npm run test`
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Run tests.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+`npm run build`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Build production app to `build` directory.
 
-### `npm run eject`
+### Additional scripts
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+`npm run lint`
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Run Eslint.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+`npm run format`
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Format the project using Prettier.
 
-## Learn More
+`npm run deploy`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Deploy the project to GitHub Pages.
+Before the deployment, `predeploy` is run which runs tests, linting, and builds the project
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Pre-commit hook
+
+The project uses [husky](https://github.com/typicode/husky)
+and [lint-staged](https://github.com/okonet/lint-staged)
+to run lint, test, and format staged files
