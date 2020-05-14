@@ -39,7 +39,6 @@ export const NewParticipant: React.FC = (props) => {
         width: 100%;
       `}
     >
-      {/**TODO: show error */}
       <Table>
         <Table.Row
           css={css`

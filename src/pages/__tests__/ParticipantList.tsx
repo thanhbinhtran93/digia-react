@@ -65,6 +65,7 @@ it('Sort table when clicking a header', async () => {
   expect(sortedNames[3]).toHaveTextContent('John Doe');
   expect(sortedNames[4]).toHaveTextContent('West');
 
+  // reverse the sort when click again
   await userEvent.click(nameSortBtn);
   const sortedNamesDesc = screen.queryAllByTestId('participant-name');
   expect(sortedNamesDesc).toHaveLength(5);

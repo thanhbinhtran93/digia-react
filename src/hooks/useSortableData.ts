@@ -46,8 +46,8 @@ export function useSortableData<T>(
 
   return {
     items: sortableItems,
-    sort,
     isSortedDesc: currentSortConfig?.isSortedDesc,
     currentSortedKey: currentSortConfig?.sortedKey,
+    sort,
   };
 }

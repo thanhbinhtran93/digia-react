@@ -12,7 +12,7 @@ export const Hero: React.FC = () => {
         padding: 2rem;
       `}
     >
-      {/**TODO: logo here */}
+      {/* logo here */}
       <div
         css={css`
           width: 32px;

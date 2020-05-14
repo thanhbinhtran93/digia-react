@@ -98,7 +98,6 @@ const EditParticipant: React.FC<EditParticipantProps> = ({ participant, onToggle
 
   return (
     <Form onSubmit={formik.handleSubmit} {...props}>
-      {/**TODO: show error */}
       <Table.Row
         css={css`
           padding: 1rem;
